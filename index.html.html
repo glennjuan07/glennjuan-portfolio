@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio | Glenn Juan</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+    body { background: #0f0f0f; color: #ffffff; overflow-x: hidden; }
+    section { padding: 100px 10%; }
+    h1, h2, h3 { font-weight: 700; }
+
+    /* Hero */
+    .hero {
+      min-height: 100vh;
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      align-items: center;
+      gap: 60px;
+    }
+    .hero img {
+      width: 100%;
+      max-width: 380px;
+      border-radius: 24px;
+      box-shadow: 0 30px 60px rgba(0,0,0,0.6);
+    }
+    .hero h1 { font-size: 56px; line-height: 1.2; }
+    .hero span { color: #00ffd5; }
+    .hero p { margin-top: 24px; font-size: 18px; opacity: 0.9; max-width: 600px; }
+
+    /* About */
+    .about p { max-width: 800px; line-height: 1.9; opacity: 0.85; margin-top: 20px; }
+
+    /* Portfolio */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      margin-top: 50px;
+    }
+    .card {
+      background: #1a1a1a;
+      padding: 32px;
+      border-radius: 18px;
+      transition: 0.4s;
+    }
+    .card:hover { transform: translateY(-10px); background: #222; }
+    .card h3 { margin-bottom: 12px; }
+    .card p { font-size: 15px; line-height: 1.7; opacity: 0.9; }
+
+    /* Contact */
+    .contact { text-align: center; }
+    .contact a {
+      display: inline-block;
+      margin: 14px;
+      padding: 14px 32px;
+      background: #00ffd5;
+      color: #000;
+      border-radius: 40px;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    @media (max-width: 900px) {
+      .hero { grid-template-columns: 1fr; text-align: center; }
+      .hero img { margin: 0 auto; }
+      .hero h1 { font-size: 42px; }
+      section { padding: 80px 6%; }
+    }
+  </style>
+</head>
+<body>
+
+  <section class="hero">
+    <div>
+      <h1>Hi, I'm <span>Glenn Juan</span></h1>
+      <p>
+        IT Business Analyst, IT Project Coordinator, and Application Support
+        with experience delivering end-to-end digital solutions across retail,
+        food & beverage, hospitality, and loyalty systems.
+      </p>
+    </div>
+    <img src="Foto Profil.jpg" alt="Glenn Juan Profile Photo">
+  </section>
+
+  <section class="about">
+    <h2>About Me</h2>
+    <p>
+      I am an IT professional currently working at PT. Akur Pratama (YOGYA Group)
+      since 2022. I specialize in analyzing business needs, translating them into
+      functional system requirements, coordinating project execution, and
+      supporting applications during and after implementation.
+      <br><br>
+      I have hands-on experience working closely with operational teams, vendors,
+      and developers to ensure systems are aligned with real business processes
+      and deliver measurable impact.
+    </p>
+  </section>
+
+  <section class="portfolio">
+    <h2>Selected Projects</h2>
+    <div class="grid">
+
+      <div class="card">
+        <h3>Sports Field Booking Management</h3>
+        <p>
+          <strong>Role:</strong> IT Business Analyst<br><br>
+          Conducted research on digital booking behavior, designed mobile web UI
+          wireframes and CMS features, and managed the end-to-end project timeline.<br><br>
+          <strong>Result:</strong> Successfully implemented and used in 2 YOGYA Group branches.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Customer Loyalty System</h3>
+        <p>
+          <strong>Role:</strong> IT Business Analyst<br><br>
+          Analyzed customer service and consumer operational needs, designed user
+          interfaces for consumer data submission and CMS data management.<br><br>
+          <strong>Result:</strong> Improved customer service efficiency and strengthened customer relationships.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Foodcourt Management System</h3>
+        <p>
+          <strong>Role:</strong> IT Business Analyst, Project Coordinator, Application Support<br><br>
+          Conducted operational research, designed mobile app UI, coordinated go-live
+          schedules, managed updates, and provided early life and issue support.<br><br>
+          <strong>Result:</strong> Deployed across 20 YOGYA Group branches.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Restaurant Management System</h3>
+        <p>
+          <strong>Role:</strong> IT Business Analyst, Project Coordinator, Application Support<br><br>
+          Researched POS features, conducted cashier and operational training,
+          supported mobile applications for waiter and kitchen teams.<br><br>
+          <strong>Result:</strong> Used in 20 YOGYA Group branches, Maison Wilhelmina, and Avril.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Hotel Management System</h3>
+        <p>
+          <strong>Role:</strong> IT Business Analyst, Project Coordinator, Application Support<br><br>
+          Led feature research, user training, project timeline planning, and post-launch support.<br><br>
+          <strong>Result:</strong> Implemented at Maison Wilhelmina.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>E-Commerce & Bill Payment Platform</h3>
+        <p>
+          <strong>Role:</strong> Application Support<br><br>
+          Provided technical support for application issues and bugs to ensure system stability.<br><br>
+          <strong>Result:</strong> Improved application stability and reliability.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="contact">
+    <h2>Contact</h2>
+    <a href="mailto:glennjuan07@gmail.com">Email</a>
+    <a href="https://www.linkedin.com/in/glenn-juan-774282224" target="_blank">LinkedIn</a>
+    <a href="tel:081324748010">Phone</a>
+  </section>
+
+</body>
+</html>
