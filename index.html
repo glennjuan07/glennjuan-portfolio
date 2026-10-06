@@ -3,117 +3,180 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Glenn Juan - Portfolio</title>
+  <title>Glenn Juan - IT Business Analyst & Project Coordinator</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <section>
-    <div>
+  <!-- HERO SECTION -->
+  <section id="hero">
+    <div class="hero-content">
       <h1>Hi, I'm <span>Glenn Juan</span></h1>
       <p>
-        IT Business Analyst, IT Project Coordinator, and Application Support
-        with experience delivering end-to-end digital solutions across retail,
-        food & beverage, hospitality, and loyalty systems.
+        IT Business Analyst & Project Coordinator with experience delivering end-to-end digital solutions across retail, food & beverage, hospitality, and loyalty systems.
       </p>
-      <br>
-      <a href="CV_Glenn_Juan.pdf" download style="color: #007bff; font-weight: bold; text-decoration: none;">[ Download CV ]</a>
+      <div class="hero-buttons">
+        <a href="#contact" class="btn primary-btn">Contact Me</a>
+        <a href="CV_Glenn_Juan.pdf" download class="btn secondary-btn">Download CV</a>
+      </div>
     </div>
     <img alt="Glenn Juan Profile Photo" src="Foto Profil.jpg">
   </section>
 
-  <section>
+  <!-- ABOUT ME -->
+  <section id="about">
     <h2>About Me</h2>
     <p>
-      I am an IT professional currently working at PT. Akur Pratama (YOGYA Group)
-      since 2022. I specialize in analyzing business needs, translating them into
-      functional system requirements, coordinating project execution, and
-      supporting applications during and after implementation.
+      I am an IT professional currently working at PT. Akur Pratama (YOGYA Group) since 2022. I specialize in analyzing business needs, translating them into functional system requirements, coordinating project execution, and supporting applications during and after implementation.
       <br><br>
-      I have hands-on experience working closely with operational teams, vendors,
-      and developers to ensure systems are aligned with real business processes
-      and deliver measurable impact.
+      I have hands-on experience working closely with operational teams, vendors, and developers to ensure systems are aligned with real business processes and deliver measurable impact.
     </p>
   </section>
 
-  <section>
+  <!-- SKILLS & TOOLS SECTION -->
+  <section id="skills">
     <h2>Skills & Tools</h2>
-    <p>
-      <strong>Core Competencies:</strong> Business Requirement Gathering (BRD), Systems Analysis, UI/UX Wireframing, Software Testing (UAT/QA), Project Scheduling, User Onboarding & Training<br><br>
-      <strong>Tools & Software:</strong> Figma, Microsoft Office (Excel, PowerPoint, Word), Canva
-    </p>
+    <div class="skills-grid">
+      <div class="skill-card">
+        <h3>Core Competencies</h3>
+        <p>Business Requirement Gathering (BRD), Systems Analysis, UI/UX Wireframing, Software Testing (UAT/QA), Project Scheduling, User Onboarding & Training</p>
+      </div>
+      <div class="skill-card">
+        <h3>Tools & Software</h3>
+        <p>Figma, Microsoft Office (Excel, PowerPoint, Word), Canva</p>
+      </div>
+    </div>
   </section>
 
-  <section>
+  <!-- SELECTED PROJECTS -->
+  <section id="projects">
     <h2>Selected Projects</h2>
-    <div>
+    <div class="projects-grid">
 
-      <div>
-        <h3>Sports Field Booking Management</h3>
-        <p>
-          <strong>Role:</strong> IT Business Analyst<br><br>
-          Conducted research on digital booking behavior, designed mobile web UI
-          wireframes and CMS features, and managed the end-to-end project timeline.<br><br>
-          <strong>Result:</strong> Successfully implemented and used in 2 YOGYA Group branches.
-        </p>
+      <!-- Project 1 -->
+      <div class="project-card">
+        <div class="project-content">
+          <h3>Foodcourt Management System</h3>
+          <p class="role"><strong>Role:</strong> IT Business Analyst, Project Coordinator, Application Support</p>
+          <div class="tags">
+            <span class="tag">BRD</span>
+            <span class="tag">UI/UX Wireframing</span>
+            <span class="tag">UAT</span>
+            <span class="tag">POS System</span>
+          </div>
+          <ul>
+            <li>Conducted operational research and mapped end-to-end foodcourt ordering workflows.</li>
+            <li>Designed mobile app UI/UX wireframes for tenant and cashier interfaces.</li>
+            <li>Coordinated go-live schedules, managed updates, and provided early-life issue support.</li>
+          </ul>
+          <p class="result"><strong>Result:</strong> Deployed across 20+ YOGYA Group branches.</p>
+        </div>
       </div>
 
-      <div>
-        <h3>Customer Loyalty System</h3>
-        <p>
-          <strong>Role:</strong> IT Business Analyst<br><br>
-          Analyzed customer service and consumer operational needs, designed user
-          interfaces for consumer data submission and CMS data management.<br><br>
-          <strong>Result:</strong> Improved customer service efficiency and strengthened customer relationships.
-        </p>
+      <!-- Project 2 -->
+      <div class="project-card">
+        <div class="project-content">
+          <h3>Restaurant Management System</h3>
+          <p class="role"><strong>Role:</strong> IT Business Analyst, Project Coordinator, Application Support</p>
+          <div class="tags">
+            <span class="tag">POS Features</span>
+            <span class="tag">User Training</span>
+            <span class="tag">Mobile Support</span>
+          </div>
+          <ul>
+            <li>Researched POS feature requirements for cashier and kitchen operations.</li>
+            <li>Conducted cashier and operational training sessions across multiple locations.</li>
+            <li>Supported mobile applications for waiter and kitchen teams to maintain smooth service flow.</li>
+          </ul>
+          <p class="result"><strong>Result:</strong> Used in 20+ YOGYA Group branches, Maison Wilhelmina, and Avril.</p>
+        </div>
       </div>
 
-      <div>
-        <h3>Foodcourt Management System</h3>
-        <p>
-          <strong>Role:</strong> IT Business Analyst, Project Coordinator, Application Support<br><br>
-          Conducted operational research, designed mobile app UI, coordinated go-live
-          schedules, managed updates, and provided early life and issue support.<br><br>
-          <strong>Result:</strong> Deployed across 20 YOGYA Group branches.
-        </p>
+      <!-- Project 3 -->
+      <div class="project-card">
+        <div class="project-content">
+          <h3>Sports Field Booking Management</h3>
+          <p class="role"><strong>Role:</strong> IT Business Analyst</p>
+          <div class="tags">
+            <span class="tag">Market Research</span>
+            <span class="tag">Mobile Web UI</span>
+            <span class="tag">CMS Design</span>
+          </div>
+          <ul>
+            <li>Conducted research on consumer digital booking behavior.</li>
+            <li>Designed mobile web UI wireframes and CMS administrative features.</li>
+            <li>Managed end-to-end project timeline from design to implementation.</li>
+          </ul>
+          <p class="result"><strong>Result:</strong> Successfully implemented and used in 2 YOGYA Group branches.</p>
+        </div>
       </div>
 
-      <div>
-        <h3>Restaurant Management System</h3>
-        <p>
-          <strong>Role:</strong> IT Business Analyst, Project Coordinator, Application Support<br><br>
-          Researched POS features, conducted cashier and operational training,
-          supported mobile applications for waiter and kitchen teams.<br><br>
-          <strong>Result:</strong> Used in 20 YOGYA Group branches, Maison Wilhelmina, and Avril.
-        </p>
+      <!-- Project 4 -->
+      <div class="project-card">
+        <div class="project-content">
+          <h3>Customer Loyalty System</h3>
+          <p class="role"><strong>Role:</strong> IT Business Analyst</p>
+          <div class="tags">
+            <span class="tag">Process Mapping</span>
+            <span class="tag">CMS Interface</span>
+            <span class="tag">Data Management</span>
+          </div>
+          <ul>
+            <li>Analyzed customer service workflows and consumer operational needs.</li>
+            <li>Designed user interfaces for consumer data submission and CMS data management.</li>
+          </ul>
+          <p class="result"><strong>Result:</strong> Improved customer service efficiency and strengthened customer relationships.</p>
+        </div>
       </div>
 
-      <div>
-        <h3>Hotel Management System</h3>
-        <p>
-          <strong>Role:</strong> IT Business Analyst, Project Coordinator, Application Support<br><br>
-          Led feature research, user training, project timeline planning, and post-launch support.<br><br>
-          <strong>Result:</strong> Implemented at Maison Wilhelmina.
-        </p>
+      <!-- Project 5 -->
+      <div class="project-card">
+        <div class="project-content">
+          <h3>Hotel Management System</h3>
+          <p class="role"><strong>Role:</strong> IT Business Analyst, Project Coordinator, Application Support</p>
+          <div class="tags">
+            <span class="tag">Feature Research</span>
+            <span class="tag">Timeline Planning</span>
+            <span class="tag">Post-Launch Support</span>
+          </div>
+          <ul>
+            <li>Led feature research and technical specifications gathering for hospitality management.</li>
+            <li>Organized user training sessions and managed end-to-end timeline planning.</li>
+            <li>Provided post-launch issue support to ensure system adoption.</li>
+          </ul>
+          <p class="result"><strong>Result:</strong> Implemented at Maison Wilhelmina.</p>
+        </div>
       </div>
 
-      <div>
-        <h3>E-Commerce & Bill Payment Platform</h3>
-        <p>
-          <strong>Role:</strong> Application Support<br><br>
-          Provided technical support for application issues and bugs to ensure system stability.<br><br>
-          <strong>Result:</strong> Improved application stability and reliability.
-        </p>
+      <!-- Project 6 -->
+      <div class="project-card">
+        <div class="project-content">
+          <h3>E-Commerce & Bill Payment Platform</h3>
+          <p class="role"><strong>Role:</strong> Application Support</p>
+          <div class="tags">
+            <span class="tag">Technical Support</span>
+            <span class="tag">Bug Resolution</span>
+            <span class="tag">System Stability</span>
+          </div>
+          <ul>
+            <li>Provided technical support for application issues and system bugs.</li>
+            <li>Collaborated with technical teams to ensure continuous system reliability and uptime.</li>
+          </ul>
+          <p class="result"><strong>Result:</strong> Improved application stability and platform reliability.</p>
+        </div>
       </div>
 
     </div>
   </section>
 
-  <section>
+  <!-- CONTACT -->
+  <section id="contact">
     <h2>Contact</h2>
-    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=glennjuan07@gmail.com" target="_blank">Email</a>
-    <a href="https://www.linkedin.com/in/glenn-juan-774282224" target="_blank">LinkedIn</a>
-    <a href="https://wa.me/6281324748010" target="_blank">WhatsApp</a>
+    <div class="contact-links">
+      <a href="https://mail.google.com/mail/?view=cm&fs=1&to=glennjuan07@gmail.com" target="_blank">Email</a>
+      <a href="https://www.linkedin.com/in/glenn-juan-774282224" target="_blank">LinkedIn</a>
+      <a href="https://wa.me/6281324748010" target="_blank">WhatsApp</a>
+    </div>
   </section>
 
 </body>
