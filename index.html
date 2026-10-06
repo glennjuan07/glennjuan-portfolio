@@ -3,172 +3,1702 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfolio | Glenn Juan</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <title>Glenn Juan — IT Business Analyst</title>
+
+  <meta
+    name="description"
+    content="Glenn Juan — IT Business Analyst, IT Project Coordinator, and Application Support."
+  />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
-    body { background: #0f0f0f; color: #ffffff; overflow-x: hidden; }
-    section { padding: 100px 10%; }
-    h1, h2, h3 { font-weight: 700; }
 
-    /* Hero */
-    .hero {
-      min-height: 100vh;
-      display: grid;
-      grid-template-columns: 1.2fr 1fr;
-      align-items: center;
-      gap: 60px;
-    }
-    .hero img {
-      width: 100%;
-      max-width: 380px;
-      border-radius: 24px;
-      box-shadow: 0 30px 60px rgba(0,0,0,0.6);
-    }
-    .hero h1 { font-size: 56px; line-height: 1.2; }
-    .hero span { color: #00ffd5; }
-    .hero p { margin-top: 24px; font-size: 18px; opacity: 0.9; max-width: 600px; }
+    /* =========================================================
+       GLOBAL
+    ========================================================= */
 
-    /* About */
-    .about p { max-width: 800px; line-height: 1.9; opacity: 0.85; margin-top: 20px; }
-
-    /* Portfolio */
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 30px;
-      margin-top: 50px;
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
-    .card {
-      background: #1a1a1a;
-      padding: 32px;
-      border-radius: 18px;
-      transition: 0.4s;
-    }
-    .card:hover { transform: translateY(-10px); background: #222; }
-    .card h3 { margin-bottom: 12px; }
-    .card p { font-size: 15px; line-height: 1.7; opacity: 0.9; }
 
-    /* Contact */
-    .contact { text-align: center; }
-    .contact a {
-      display: inline-block;
-      margin: 14px;
-      padding: 14px 32px;
-      background: #00ffd5;
-      color: #000;
-      border-radius: 40px;
-      font-weight: 600;
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: #f5f2ec;
+      color: #20201e;
+      font-family: "DM Sans", sans-serif;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      color: inherit;
       text-decoration: none;
     }
 
-    @media (max-width: 900px) {
-      .hero { grid-template-columns: 1fr; text-align: center; }
-      .hero img { margin: 0 auto; }
-      .hero h1 { font-size: 42px; }
-      section { padding: 80px 6%; }
+    .container {
+      width: min(1180px, 88%);
+      margin: auto;
     }
+
+    section {
+      padding: 120px 0;
+    }
+
+    .eyebrow {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #8b7355;
+      margin-bottom: 18px;
+    }
+
+    .section-title {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(42px, 5vw, 64px);
+      line-height: 1.05;
+      font-weight: 600;
+    }
+
+    .section-description {
+      max-width: 620px;
+      margin-top: 20px;
+      color: #6c6a65;
+      font-size: 16px;
+    }
+
+
+    /* =========================================================
+       NAVIGATION
+    ========================================================= */
+
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+
+      padding: 24px 0;
+
+      transition: all 0.3s ease;
+    }
+
+    .navbar.scrolled {
+      background: rgba(245, 242, 236, 0.94);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(32, 32, 30, 0.08);
+      padding: 16px 0;
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-family: "Playfair Display", serif;
+      font-size: 24px;
+      font-weight: 600;
+      letter-spacing: -0.5px;
+    }
+
+    .logo span {
+      color: #9a805f;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 34px;
+      list-style: none;
+      font-size: 14px;
+    }
+
+    .nav-links a {
+      position: relative;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -6px;
+      width: 0;
+      height: 1px;
+      background: #9a805f;
+      transition: width 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: #9a805f;
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+
+    /* =========================================================
+       HERO
+    ========================================================= */
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding-top: 150px;
+      padding-bottom: 100px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 100px;
+      align-items: center;
+    }
+
+    .hero-title {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(58px, 7vw, 96px);
+      line-height: 0.98;
+      font-weight: 600;
+      letter-spacing: -3px;
+    }
+
+    .hero-title em {
+      color: #9a805f;
+      font-style: italic;
+    }
+
+    .hero-description {
+      max-width: 650px;
+      margin-top: 32px;
+      color: #65635e;
+      font-size: 18px;
+      line-height: 1.8;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 14px;
+      margin-top: 38px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      padding: 14px 25px;
+
+      border-radius: 999px;
+
+      font-size: 14px;
+      font-weight: 600;
+
+      transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        color 0.3s ease;
+    }
+
+    .btn-primary {
+      background: #20201e;
+      color: #ffffff;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      background: #9a805f;
+    }
+
+    .btn-secondary {
+      border: 1px solid #c9c2b7;
+      color: #20201e;
+    }
+
+    .btn-secondary:hover {
+      transform: translateY(-3px);
+      border-color: #9a805f;
+      color: #9a805f;
+    }
+
+    .hero-image-wrapper {
+      position: relative;
+    }
+
+    .hero-image {
+      width: 100%;
+      max-width: 430px;
+      margin-left: auto;
+
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+
+      border-radius: 220px 220px 24px 24px;
+
+      filter: saturate(0.88);
+    }
+
+    .hero-image-wrapper::before {
+      content: "";
+
+      position: absolute;
+
+      width: 100%;
+      height: 100%;
+
+      max-width: 430px;
+
+      border: 1px solid #b9a78f;
+
+      border-radius: 220px 220px 24px 24px;
+
+      top: 18px;
+      right: -18px;
+
+      z-index: -1;
+    }
+
+    .hero-caption {
+      position: absolute;
+      bottom: 25px;
+      left: -30px;
+
+      background: #20201e;
+      color: white;
+
+      padding: 16px 20px;
+
+      border-radius: 12px;
+
+      font-size: 12px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+
+    /* =========================================================
+       ABOUT
+    ========================================================= */
+
+    .about {
+      background: #20201e;
+      color: #ffffff;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 0.7fr 1.3fr;
+      gap: 100px;
+      align-items: start;
+    }
+
+    .about .eyebrow {
+      color: #b9a78f;
+    }
+
+    .about .section-title {
+      color: white;
+    }
+
+    .about-text {
+      color: #c6c4bf;
+      font-size: 17px;
+      line-height: 1.9;
+    }
+
+    .about-text p + p {
+      margin-top: 22px;
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 32px;
+    }
+
+    .skill {
+      border: 1px solid #4b4a46;
+      padding: 9px 14px;
+      border-radius: 999px;
+      font-size: 13px;
+      color: #d7d5d0;
+    }
+
+
+    /* =========================================================
+       EXPERIENCE
+    ========================================================= */
+
+    .experience-grid {
+      display: grid;
+      grid-template-columns: 0.7fr 1.3fr;
+      gap: 100px;
+    }
+
+    .experience-company {
+      font-family: "Playfair Display", serif;
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+
+    .experience-date {
+      color: #9a805f;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .experience-content {
+      border-left: 1px solid #d4cec3;
+      padding-left: 45px;
+    }
+
+    .role {
+      margin-bottom: 35px;
+      position: relative;
+    }
+
+    .role::before {
+      content: "";
+
+      position: absolute;
+
+      width: 9px;
+      height: 9px;
+
+      border-radius: 50%;
+
+      background: #9a805f;
+
+      left: -50px;
+      top: 8px;
+    }
+
+    .role-title {
+      font-size: 20px;
+      font-weight: 700;
+    }
+
+    .role-description {
+      margin-top: 10px;
+      color: #6c6a65;
+    }
+
+
+    /* =========================================================
+       PROJECTS
+    ========================================================= */
+
+    .projects-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 40px;
+      margin-bottom: 60px;
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 25px;
+    }
+
+    .project-card {
+      background: #ffffff;
+      padding: 38px;
+
+      border-radius: 20px;
+
+      border: 1px solid #e4dfd6;
+
+      transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 50px rgba(32, 32, 30, 0.08);
+    }
+
+    .project-number {
+      font-size: 13px;
+      color: #9a805f;
+      font-weight: 700;
+      letter-spacing: 2px;
+    }
+
+    .project-title {
+      font-family: "Playfair Display", serif;
+      font-size: 32px;
+      margin-top: 15px;
+      line-height: 1.2;
+    }
+
+    .project-role {
+      display: inline-block;
+
+      margin-top: 18px;
+
+      padding: 7px 12px;
+
+      border-radius: 999px;
+
+      background: #f0ece5;
+
+      color: #756149;
+
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    .project-section {
+      margin-top: 25px;
+    }
+
+    .project-label {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #9a805f;
+      font-weight: 700;
+      margin-bottom: 7px;
+    }
+
+    .project-section p {
+      color: #66645f;
+      font-size: 14px;
+      line-height: 1.75;
+    }
+
+    .project-result {
+      margin-top: 25px;
+      padding-top: 20px;
+      border-top: 1px solid #e6e1d8;
+    }
+
+    .project-result p {
+      color: #33322f;
+      font-weight: 600;
+    }
+
+
+    /* =========================================================
+       APPROACH
+    ========================================================= */
+
+    .approach {
+      background: #eae5dc;
+    }
+
+    .approach-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+      margin-top: 55px;
+    }
+
+    .approach-card {
+      padding: 35px;
+      background: rgba(255,255,255,0.55);
+      border-radius: 18px;
+    }
+
+    .approach-number {
+      font-family: "Playfair Display", serif;
+      font-size: 42px;
+      color: #9a805f;
+    }
+
+    .approach-card h3 {
+      margin-top: 20px;
+      font-size: 20px;
+    }
+
+    .approach-card p {
+      margin-top: 12px;
+      color: #6b6963;
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+
+    /* =========================================================
+       CONTACT
+    ========================================================= */
+
+    .contact {
+      text-align: center;
+      padding: 150px 0;
+    }
+
+    .contact .section-title {
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .contact-description {
+      max-width: 550px;
+      margin: 25px auto 0;
+      color: #6c6a65;
+    }
+
+    .contact-buttons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 35px;
+    }
+
+    .contact-link {
+      border: 1px solid #c9c2b7;
+      padding: 13px 22px;
+      border-radius: 999px;
+      font-size: 14px;
+      transition: 0.3s ease;
+    }
+
+    .contact-link:hover {
+      background: #20201e;
+      color: #ffffff;
+      border-color: #20201e;
+      transform: translateY(-3px);
+    }
+
+
+    /* =========================================================
+       FOOTER
+    ========================================================= */
+
+    footer {
+      border-top: 1px solid #d8d2c8;
+      padding: 25px 0;
+      color: #77736c;
+      font-size: 12px;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+
+    /* =========================================================
+       SCROLL ANIMATION
+    ========================================================= */
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s ease;
+    }
+
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+
+    /* =========================================================
+       RESPONSIVE
+    ========================================================= */
+
+    @media (max-width: 900px) {
+
+      section {
+        padding: 90px 0;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .hero {
+        padding-top: 130px;
+      }
+
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 70px;
+      }
+
+      .hero-image {
+        margin: auto;
+      }
+
+      .hero-image-wrapper::before {
+        right: 0;
+      }
+
+      .hero-caption {
+        left: 10px;
+      }
+
+      .about-grid,
+      .experience-grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+      }
+
+      .projects-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .approach-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .projects-header {
+        display: block;
+      }
+
+      .projects-header .section-description {
+        margin-bottom: 25px;
+      }
+    }
+
+
+    @media (max-width: 600px) {
+
+      .container {
+        width: 90%;
+      }
+
+      .hero-title {
+        font-size: 54px;
+        letter-spacing: -2px;
+      }
+
+      .hero-description {
+        font-size: 16px;
+      }
+
+      .project-card {
+        padding: 28px;
+      }
+
+      .project-title {
+        font-size: 28px;
+      }
+
+      .experience-content {
+        padding-left: 30px;
+      }
+
+      .role::before {
+        left: -35px;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+      }
+    }
+
   </style>
 </head>
+
+
 <body>
 
-  <section class="hero">
-    <div>
-      <h1>Hi, I'm <span>Glenn Juan</span></h1>
-      <p>
-        IT Business Analyst, IT Project Coordinator, and Application Support
-        with experience delivering end-to-end digital solutions across retail,
-        food & beverage, hospitality, and loyalty systems.
-      </p>
-    </div>
-    <img src="Foto Profil.jpg" alt="Glenn Juan Profile Photo">
-  </section>
 
-  <section class="about">
-    <h2>About Me</h2>
-    <p>
-      I am an IT professional currently working at PT. Akur Pratama (YOGYA Group)
-      since 2022. I specialize in analyzing business needs, translating them into
-      functional system requirements, coordinating project execution, and
-      supporting applications during and after implementation.
-      <br><br>
-      I have hands-on experience working closely with operational teams, vendors,
-      and developers to ensure systems are aligned with real business processes
-      and deliver measurable impact.
-    </p>
-  </section>
+  <!-- =======================================================
+       NAVIGATION
+  ======================================================== -->
 
-  <section class="portfolio">
-    <h2>Selected Projects</h2>
-    <div class="grid">
+  <header class="navbar" id="navbar">
 
-      <div class="card">
-        <h3>Sports Field Booking Management</h3>
-        <p>
-          <strong>Role:</strong> IT Business Analyst<br><br>
-          Conducted research on digital booking behavior, designed mobile web UI
-          wireframes and CMS features, and managed the end-to-end project timeline.<br><br>
-          <strong>Result:</strong> Successfully implemented and used in 2 YOGYA Group branches.
-        </p>
-      </div>
+    <div class="container nav-inner">
 
-      <div class="card">
-        <h3>Customer Loyalty System</h3>
-        <p>
-          <strong>Role:</strong> IT Business Analyst<br><br>
-          Analyzed customer service and consumer operational needs, designed user
-          interfaces for consumer data submission and CMS data management.<br><br>
-          <strong>Result:</strong> Improved customer service efficiency and strengthened customer relationships.
-        </p>
-      </div>
+      <a href="#home" class="logo">
+        Glenn<span>.</span>
+      </a>
 
-      <div class="card">
-        <h3>Foodcourt Management System</h3>
-        <p>
-          <strong>Role:</strong> IT Business Analyst, Project Coordinator, Application Support<br><br>
-          Conducted operational research, designed mobile app UI, coordinated go-live
-          schedules, managed updates, and provided early life and issue support.<br><br>
-          <strong>Result:</strong> Deployed across 20 YOGYA Group branches.
-        </p>
-      </div>
+      <ul class="nav-links">
 
-      <div class="card">
-        <h3>Restaurant Management System</h3>
-        <p>
-          <strong>Role:</strong> IT Business Analyst, Project Coordinator, Application Support<br><br>
-          Researched POS features, conducted cashier and operational training,
-          supported mobile applications for waiter and kitchen teams.<br><br>
-          <strong>Result:</strong> Used in 20 YOGYA Group branches, Maison Wilhelmina, and Avril.
-        </p>
-      </div>
+        <li>
+          <a href="#about">About</a>
+        </li>
 
-      <div class="card">
-        <h3>Hotel Management System</h3>
-        <p>
-          <strong>Role:</strong> IT Business Analyst, Project Coordinator, Application Support<br><br>
-          Led feature research, user training, project timeline planning, and post-launch support.<br><br>
-          <strong>Result:</strong> Implemented at Maison Wilhelmina.
-        </p>
-      </div>
+        <li>
+          <a href="#experience">Experience</a>
+        </li>
 
-      <div class="card">
-        <h3>E-Commerce & Bill Payment Platform</h3>
-        <p>
-          <strong>Role:</strong> Application Support<br><br>
-          Provided technical support for application issues and bugs to ensure system stability.<br><br>
-          <strong>Result:</strong> Improved application stability and reliability.
-        </p>
-      </div>
+        <li>
+          <a href="#projects">Projects</a>
+        </li>
+
+        <li>
+          <a href="#approach">Approach</a>
+        </li>
+
+        <li>
+          <a href="#contact">Contact</a>
+        </li>
+
+      </ul>
 
     </div>
-  </section>
 
-    <section class="contact">
-    <h2>Contact</h2>
-    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=glennjuan07@gmail.com" target="_blank">Email</a>
-    <a href="https://www.linkedin.com/in/glenn-juan-774282224" target="_blank">LinkedIn</a>
-    <a href="https://wa.me/6281324748010" target="_blank">WhatsApp</a>
-  </section>
+  </header>
+
+
+
+  <!-- =======================================================
+       HERO
+  ======================================================== -->
+
+  <main>
+
+    <section class="hero" id="home">
+
+      <div class="container">
+
+        <div class="hero-grid">
+
+          <div class="hero-content reveal">
+
+            <div class="eyebrow">
+              IT Business Analyst · Project Coordinator
+            </div>
+
+            <h1 class="hero-title">
+              Turning
+              <em>business needs</em>
+              into digital solutions.
+            </h1>
+
+            <p class="hero-description">
+
+              I'm Glenn Juan, an IT professional specializing in
+              business analysis, project coordination, and application
+              support. I bridge the gap between business operations
+              and technology to create practical digital solutions.
+
+            </p>
+
+            <div class="hero-buttons">
+
+              <a href="#projects" class="btn btn-primary">
+                Explore My Work
+              </a>
+
+              <a href="#contact" class="btn btn-secondary">
+                Let's Connect
+              </a>
+
+            </div>
+
+          </div>
+
+
+          <div class="hero-image-wrapper reveal">
+
+            <img
+              src="Foto Profil.jpg"
+              alt="Glenn Juan"
+              class="hero-image"
+            />
+
+            <div class="hero-caption">
+              Based in Indonesia
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         ABOUT
+    ====================================================== -->
+
+    <section class="about" id="about">
+
+      <div class="container">
+
+        <div class="about-grid">
+
+          <div class="reveal">
+
+            <div class="eyebrow">
+              About Me
+            </div>
+
+            <h2 class="section-title">
+              Business meets technology.
+            </h2>
+
+          </div>
+
+
+          <div class="about-text reveal">
+
+            <p>
+
+              I am an IT professional currently working at
+              PT. Akur Pratama (YOGYA Group) since 2022.
+
+              My experience spans business analysis, project coordination,
+              application support, and digital solution implementation
+              across retail, food & beverage, hospitality, customer loyalty,
+              e-commerce, and payment services.
+
+            </p>
+
+            <p>
+
+              I enjoy understanding how people and businesses work,
+              identifying operational challenges, and translating those
+              challenges into practical technology solutions.
+
+            </p>
+
+
+            <div class="skills">
+
+              <span class="skill">Business Analysis</span>
+              <span class="skill">Project Coordination</span>
+              <span class="skill">Requirements Analysis</span>
+              <span class="skill">UI Wireframing</span>
+              <span class="skill">Application Support</span>
+              <span class="skill">User Training</span>
+              <span class="skill">UAT</span>
+              <span class="skill">Operational Research</span>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         EXPERIENCE
+    ====================================================== -->
+
+    <section id="experience">
+
+      <div class="container">
+
+        <div class="experience-grid">
+
+          <div class="reveal">
+
+            <div class="eyebrow">
+              Experience
+            </div>
+
+            <div class="experience-company">
+              PT. Akur Pratama
+            </div>
+
+            <div class="experience-date">
+              2022 — Present
+            </div>
+
+          </div>
+
+
+          <div class="experience-content reveal">
+
+            <div class="role">
+
+              <div class="role-title">
+                IT Business Analyst
+              </div>
+
+              <p class="role-description">
+
+                Analyze business and operational requirements,
+                conduct research, define system requirements,
+                and translate business processes into practical
+                digital solutions.
+
+              </p>
+
+            </div>
+
+
+            <div class="role">
+
+              <div class="role-title">
+                IT Project Coordinator
+              </div>
+
+              <p class="role-description">
+
+                Coordinate project timelines, implementation,
+                go-live activities, application updates,
+                user training, and communication between
+                business and technical teams.
+
+              </p>
+
+            </div>
+
+
+            <div class="role">
+
+              <div class="role-title">
+                Application Support
+              </div>
+
+              <p class="role-description">
+
+                Provide application support, investigate issues
+                and bugs, assist users, and ensure applications
+                remain stable after implementation.
+
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         PROJECTS
+    ====================================================== -->
+
+    <section id="projects">
+
+      <div class="container">
+
+        <div class="projects-header reveal">
+
+          <div>
+
+            <div class="eyebrow">
+              Selected Work
+            </div>
+
+            <h2 class="section-title">
+              Projects that made an impact.
+            </h2>
+
+          </div>
+
+          <p class="section-description">
+
+            A selection of projects where I contributed across
+            business analysis, project coordination, implementation,
+            and application support.
+
+          </p>
+
+        </div>
+
+
+        <div class="projects-grid">
+
+
+          <!-- PROJECT 01 -->
+
+          <article class="project-card reveal">
+
+            <div class="project-number">
+              01 / 06
+            </div>
+
+            <h3 class="project-title">
+              Sports Field Booking Management
+            </h3>
+
+            <span class="project-role">
+              IT Business Analyst
+            </span>
+
+
+            <div class="project-section">
+
+              <div class="project-label">
+                Challenge
+              </div>
+
+              <p>
+
+                Research digital booking behavior and identify
+                requirements for a sports field booking system.
+
+              </p>
+
+            </div>
+
+
+            <div class="project-section">
+
+              <div class="project-label">
+                Contribution
+              </div>
+
+              <p>
+
+                Designed mobile website UI wireframes,
+                defined CMS features, and planned the
+                end-to-end project timeline.
+
+              </p>
+
+            </div>
+
+
+            <div class="project-result">
+
+              <div class="project-label">
+                Result
+              </div>
+
+              <p>
+                Successfully implemented across 2 YOGYA Group branches.
+              </p>
+
+            </div>
+
+          </article>
+
+
+
+          <!-- PROJECT 02 -->
+
+          <article class="project-card reveal">
+
+            <div class="project-number">
+              02 / 06
+            </div>
+
+            <h3 class="project-title">
+              Customer Loyalty System
+            </h3>
+
+            <span class="project-role">
+              IT Business Analyst
+            </span>
+
+
+            <div class="project-section">
+
+              <div class="project-label">
+                Challenge
+              </div>
+
+              <p>
+
+                Understand customer service and consumer needs
+                to build stronger customer relationships.
+
+              </p>
+
+            </div>
+
+
+            <div class="project-section">
+
+              <div class="project-label">
+                Contribution
+              </div>
+
+              <p>
+
+                Researched operational requirements and created
+                UI wireframes for consumer data submission and
+                CMS data management.
+
+              </p>
+
+            </div>
+
+
+            <div class="project-result">
+
+              <div class="project-label">
+                Result
+              </div>
+
+              <p>
+                Improved customer service access to consumer data
+                and supported stronger customer relationships.
+              </p>
+
+            </div>
+
+          </article>
+
+
+
+          <!-- PROJECT 03 -->
+
+          <article class="project-card reveal">
+
+            <div class="project-number">
+              03 / 06
+            </div>
+
+            <h3 class="project-title">
+              Foodcourt Management System
+            </h3>
+
+            <span class="project-role">
+              BA · Project Coordinator · Support
+            </span>
+
+
+            <div class="project-section">
+
+              <div class="project-label">
+                Challenge
+              </div>
+
+              <p>
+
+                Digitize foodcourt operations while ensuring
+                smooth implementation across multiple branches.
+
+              </p>
+
+            </div>
+
+
+            <div class="project-section">
+
+              <div class="project-label">
+                Contribution
+              </div>
+
+              <p>
+
+                Conducted operational research, designed mobile
+                UI wireframes, coordinated go-live schedules,
+                managed application updates, and provided
+                early life support.
+
+              </p>
+
+            </div>
+
+
+            <div class="project-result">
+
+              <div class="project-label">
+                Result
+              </div>
+
+              <p>
+                Successfully deployed across 20 YOGYA Group branches.
+              </p>
+
+            </div>
+
+          </article>
+
+
+
+          <!-- PROJECT 04 -->
+
+          <article class="project-card reveal">
+
+            <div class="project-number">
+              04 / 06
+            </div>
+
+            <h3 class="project-title">
+              Restaurant Management System
+            </h3>
+
+            <span class="project-role">
+              BA · Project Coordinator · Support
+            </span>
+
+
+            <div class="project-section">
+
+              <div class="project-label">
+                Challenge
+              </div>
+
+              <p>
+
+                Support restaurant operations through integrated
+                POS and mobile applications.
+
+              </p>
+
+            </div>
+
+
+            <div class="project-section">
+
+              <div class="project-label">
+                Contribution
+              </div>
+
+              <p>
+
+                Researched POS features, conducted cashier training,
+                trained waiter and kitchen users, and provided
+                early life support.
+
+              </p>
+
+            </div>
+
+
+            <div class="project-result">
+
+              <div class="project-label">
+                Result
+              </div>
+
+              <p>
+                Used across 20 YOGYA Group branches,
+                Maison Wilhelmina, and Avril.
+              </p>
+
+            </div>
+
+          </article>
+
+
+
+          <!-- PROJECT 05 -->
+
+          <article class="project-card reveal">
+
+            <div class="project-number">
+              05 / 06
+            </div>
+
+            <h3 class="project-title">
+              Hotel Management System
+            </h3>
+
+            <span class="project-role">
+              BA · Project Coordinator · Support
+            </span>
+
+
+            <div class="project-section">
+
+              <div class="project-label">
+                Challenge
+              </div>
+
+              <p>
+
+                Identify digital requirements for hotel operations
+                and ensure successful implementation.
+
+              </p>
+
+            </div>
+
+
+            <div class="project-section">
+
+              <div class="project-label">
+                Contribution
+              </div>
+
+              <p>
+
+                Researched hotel management features, trained
+                operational users, coordinated the project timeline,
+                and provided application support.
+
+              </p>
+
+            </div>
+
+
+            <div class="project-result">
+
+              <div class="project-label">
+                Result
+              </div>
+
+              <p>
+                Successfully implemented at Maison Wilhelmina.
+              </p>
+
+            </div>
+
+          </article>
+
+
+
+          <!-- PROJECT 06 -->
+
+          <article class="project-card reveal">
+
+            <div class="project-number">
+              06 / 06
+            </div>
+
+            <h3 class="project-title">
+              E-Commerce & Bill Payment Platform
+            </h3>
+
+            <span class="project-role">
+              Application Support
+            </span>
+
+
+            <div class="project-section">
+
+              <div class="project-label">
+                Challenge
+              </div>
+
+              <p>
+
+                Maintain application reliability and respond
+                to operational issues affecting users.
+
+              </p>
+
+            </div>
+
+
+            <div class="project-section">
+
+              <div class="project-label">
+                Contribution
+              </div>
+
+              <p>
+
+                Investigated application issues and bugs,
+                supported users, and coordinated issue resolution.
+
+              </p>
+
+            </div>
+
+
+            <div class="project-result">
+
+              <div class="project-label">
+                Result
+              </div>
+
+              <p>
+                Improved application stability and reliability.
+              </p>
+
+            </div>
+
+          </article>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         APPROACH
+    ====================================================== -->
+
+    <section class="approach" id="approach">
+
+      <div class="container">
+
+        <div class="reveal">
+
+          <div class="eyebrow">
+            How I Work
+          </div>
+
+          <h2 class="section-title">
+            From problem<br>
+            to solution.
+          </h2>
+
+          <p class="section-description">
+
+            My approach combines business understanding,
+            user needs, and technology to create solutions
+            that are practical and usable.
+
+          </p>
+
+        </div>
+
+
+        <div class="approach-grid">
+
+          <div class="approach-card reveal">
+
+            <div class="approach-number">
+              01
+            </div>
+
+            <h3>
+              Understand
+            </h3>
+
+            <p>
+
+              Understand business objectives, operational processes,
+              user needs, and existing pain points before defining
+              a solution.
+
+            </p>
+
+          </div>
+
+
+          <div class="approach-card reveal">
+
+            <div class="approach-number">
+              02
+            </div>
+
+            <h3>
+              Design
+            </h3>
+
+            <p>
+
+              Translate requirements into workflows, system
+              requirements, user stories, and UI wireframes
+              that can be understood by both business and
+              technical teams.
+
+            </p>
+
+          </div>
+
+
+          <div class="approach-card reveal">
+
+            <div class="approach-number">
+              03
+            </div>
+
+            <h3>
+              Deliver
+            </h3>
+
+            <p>
+
+              Coordinate implementation, testing, training,
+              go-live activities, and post-launch support
+              to ensure the solution works in real operations.
+
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         CONTACT
+    ====================================================== -->
+
+    <section class="contact" id="contact">
+
+      <div class="container">
+
+        <div class="eyebrow">
+          Get In Touch
+        </div>
+
+        <h2 class="section-title reveal">
+          Let's build something
+          meaningful together.
+        </h2>
+
+        <p class="contact-description reveal">
+
+          Whether you're looking for an IT Business Analyst,
+          project coordination support, or someone who can
+          bridge business needs with technology, I'd be happy
+          to connect.
+
+        </p>
+
+
+        <div class="contact-buttons reveal">
+
+          <!-- Gmail -->
+
+          <a
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=glennjuan07@gmail.com"
+            target="_blank"
+            class="contact-link"
+          >
+            Email
+          </a>
+
+
+          <!-- LinkedIn -->
+
+          <a
+            href="https://www.linkedin.com/in/glenn-juan-774282224"
+            target="_blank"
+            class="contact-link"
+          >
+            LinkedIn
+          </a>
+
+
+          <!-- WhatsApp -->
+
+          <a
+            href="https://wa.me/6281324748010"
+            target="_blank"
+            class="contact-link"
+          >
+            WhatsApp
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+
+  <!-- =======================================================
+       FOOTER
+  ======================================================== -->
+
+  <footer>
+
+    <div class="container footer-inner">
+
+      <div>
+        © 2026 Glenn Juan
+      </div>
+
+      <div>
+        IT Business Analyst · Project Coordinator · Application Support
+      </div>
+
+    </div>
+
+  </footer>
+
+
+
+  <!-- =======================================================
+       JAVASCRIPT
+  ======================================================== -->
+
+  <script>
+
+    /* =======================================================
+       NAVBAR SCROLL EFFECT
+    ======================================================== */
+
+    const navbar = document.getElementById("navbar");
+
+    window.addEventListener("scroll", () => {
+
+      if (window.scrollY > 50) {
+        navbar.classList.add("scrolled");
+      } else {
+        navbar.classList.remove("scrolled");
+      }
+
+    });
+
+
+
+    /* =======================================================
+       SCROLL REVEAL
+    ======================================================== */
+
+    const revealElements =
+      document.querySelectorAll(".reveal");
+
+    const observer = new IntersectionObserver(
+
+      (entries) => {
+
+        entries.forEach((entry) => {
+
+          if (entry.isIntersecting) {
+
+            entry.target.classList.add("active");
+
+            observer.unobserve(entry.target);
+
+          }
+
+        });
+
+      },
+
+      {
+        threshold: 0.12
+      }
+
+    );
+
+
+    revealElements.forEach((element) => {
+
+      observer.observe(element);
+
+    });
+
+  </script>
+
 
 </body>
 </html>
