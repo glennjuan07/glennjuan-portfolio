@@ -140,12 +140,16 @@
 
     .nav-links a::after {
       content: "";
+
       position: absolute;
       left: 0;
       bottom: -6px;
+
       width: 0;
       height: 1px;
+
       background: #9a805f;
+
       transition: width 0.3s ease;
     }
 
@@ -164,24 +168,33 @@
 
     .hero {
       min-height: 100vh;
+
       display: flex;
       align-items: center;
+
       padding-top: 150px;
       padding-bottom: 100px;
     }
 
     .hero-grid {
       display: grid;
+
       grid-template-columns: 1.15fr 0.85fr;
+
       gap: 100px;
+
       align-items: center;
     }
 
     .hero-title {
       font-family: "Playfair Display", serif;
+
       font-size: clamp(58px, 7vw, 96px);
+
       line-height: 0.98;
+
       font-weight: 600;
+
       letter-spacing: -3px;
     }
 
@@ -192,21 +205,29 @@
 
     .hero-description {
       max-width: 650px;
+
       margin-top: 32px;
+
       color: #65635e;
+
       font-size: 18px;
+
       line-height: 1.8;
     }
 
     .hero-buttons {
       display: flex;
+
       gap: 14px;
+
       margin-top: 38px;
+
       flex-wrap: wrap;
     }
 
     .btn {
       display: inline-flex;
+
       align-items: center;
       justify-content: center;
 
@@ -215,12 +236,14 @@
       border-radius: 999px;
 
       font-size: 14px;
+
       font-weight: 600;
 
       transition:
         transform 0.3s ease,
         background 0.3s ease,
-        color 0.3s ease;
+        color 0.3s ease,
+        border-color 0.3s ease;
     }
 
     .btn-primary {
@@ -230,17 +253,21 @@
 
     .btn-primary:hover {
       transform: translateY(-3px);
+
       background: #9a805f;
     }
 
     .btn-secondary {
       border: 1px solid #c9c2b7;
+
       color: #20201e;
     }
 
     .btn-secondary:hover {
       transform: translateY(-3px);
+
       border-color: #9a805f;
+
       color: #9a805f;
     }
 
@@ -250,10 +277,13 @@
 
     .hero-image {
       width: 100%;
+
       max-width: 430px;
+
       margin-left: auto;
 
       aspect-ratio: 4 / 5;
+
       object-fit: cover;
 
       border-radius: 220px 220px 24px 24px;
@@ -283,10 +313,12 @@
 
     .hero-caption {
       position: absolute;
+
       bottom: 25px;
       left: -30px;
 
       background: #20201e;
+
       color: white;
 
       padding: 16px 20px;
@@ -294,7 +326,9 @@
       border-radius: 12px;
 
       font-size: 12px;
+
       letter-spacing: 1px;
+
       text-transform: uppercase;
     }
 
@@ -305,13 +339,17 @@
 
     .about {
       background: #20201e;
+
       color: #ffffff;
     }
 
     .about-grid {
       display: grid;
+
       grid-template-columns: 0.7fr 1.3fr;
+
       gap: 100px;
+
       align-items: start;
     }
 
@@ -325,7 +363,9 @@
 
     .about-text {
       color: #c6c4bf;
+
       font-size: 17px;
+
       line-height: 1.9;
     }
 
@@ -335,16 +375,23 @@
 
     .skills {
       display: flex;
+
       flex-wrap: wrap;
+
       gap: 10px;
+
       margin-top: 32px;
     }
 
     .skill {
       border: 1px solid #4b4a46;
+
       padding: 9px 14px;
+
       border-radius: 999px;
+
       font-size: 13px;
+
       color: #d7d5d0;
     }
 
@@ -355,29 +402,37 @@
 
     .experience-grid {
       display: grid;
+
       grid-template-columns: 0.7fr 1.3fr;
+
       gap: 100px;
     }
 
     .experience-company {
       font-family: "Playfair Display", serif;
+
       font-size: 36px;
+
       margin-bottom: 10px;
     }
 
     .experience-date {
       color: #9a805f;
+
       font-size: 14px;
+
       font-weight: 600;
     }
 
     .experience-content {
       border-left: 1px solid #d4cec3;
+
       padding-left: 45px;
     }
 
     .role {
       margin-bottom: 35px;
+
       position: relative;
     }
 
@@ -394,16 +449,19 @@
       background: #9a805f;
 
       left: -50px;
+
       top: 8px;
     }
 
     .role-title {
       font-size: 20px;
+
       font-weight: 700;
     }
 
     .role-description {
       margin-top: 10px;
+
       color: #6c6a65;
     }
 
@@ -414,20 +472,27 @@
 
     .projects-header {
       display: flex;
+
       justify-content: space-between;
+
       align-items: end;
+
       gap: 40px;
+
       margin-bottom: 60px;
     }
 
     .projects-grid {
       display: grid;
+
       grid-template-columns: repeat(2, 1fr);
+
       gap: 25px;
     }
 
     .project-card {
       background: #ffffff;
+
       padding: 38px;
 
       border-radius: 20px;
@@ -441,20 +506,28 @@
 
     .project-card:hover {
       transform: translateY(-8px);
-      box-shadow: 0 20px 50px rgba(32, 32, 30, 0.08);
+
+      box-shadow:
+        0 20px 50px rgba(32, 32, 30, 0.08);
     }
 
     .project-number {
       font-size: 13px;
+
       color: #9a805f;
+
       font-weight: 700;
+
       letter-spacing: 2px;
     }
 
     .project-title {
       font-family: "Playfair Display", serif;
+
       font-size: 32px;
+
       margin-top: 15px;
+
       line-height: 1.2;
     }
 
@@ -472,6 +545,7 @@
       color: #756149;
 
       font-size: 12px;
+
       font-weight: 600;
     }
 
@@ -481,27 +555,37 @@
 
     .project-label {
       font-size: 11px;
+
       text-transform: uppercase;
+
       letter-spacing: 2px;
+
       color: #9a805f;
+
       font-weight: 700;
+
       margin-bottom: 7px;
     }
 
     .project-section p {
       color: #66645f;
+
       font-size: 14px;
+
       line-height: 1.75;
     }
 
     .project-result {
       margin-top: 25px;
+
       padding-top: 20px;
+
       border-top: 1px solid #e6e1d8;
     }
 
     .project-result p {
       color: #33322f;
+
       font-weight: 600;
     }
 
@@ -516,32 +600,43 @@
 
     .approach-grid {
       display: grid;
+
       grid-template-columns: repeat(3, 1fr);
+
       gap: 25px;
+
       margin-top: 55px;
     }
 
     .approach-card {
       padding: 35px;
-      background: rgba(255,255,255,0.55);
+
+      background: rgba(255, 255, 255, 0.55);
+
       border-radius: 18px;
     }
 
     .approach-number {
       font-family: "Playfair Display", serif;
+
       font-size: 42px;
+
       color: #9a805f;
     }
 
     .approach-card h3 {
       margin-top: 20px;
+
       font-size: 20px;
     }
 
     .approach-card p {
       margin-top: 12px;
+
       color: #6b6963;
+
       font-size: 14px;
+
       line-height: 1.7;
     }
 
@@ -552,40 +647,55 @@
 
     .contact {
       text-align: center;
+
       padding: 150px 0;
     }
 
     .contact .section-title {
       max-width: 800px;
+
       margin: auto;
     }
 
     .contact-description {
       max-width: 550px;
+
       margin: 25px auto 0;
+
       color: #6c6a65;
     }
 
     .contact-buttons {
       display: flex;
+
       justify-content: center;
+
       flex-wrap: wrap;
+
       gap: 12px;
+
       margin-top: 35px;
     }
 
     .contact-link {
       border: 1px solid #c9c2b7;
+
       padding: 13px 22px;
+
       border-radius: 999px;
+
       font-size: 14px;
+
       transition: 0.3s ease;
     }
 
     .contact-link:hover {
       background: #20201e;
+
       color: #ffffff;
+
       border-color: #20201e;
+
       transform: translateY(-3px);
     }
 
@@ -596,14 +706,19 @@
 
     footer {
       border-top: 1px solid #d8d2c8;
+
       padding: 25px 0;
+
       color: #77736c;
+
       font-size: 12px;
     }
 
     .footer-inner {
       display: flex;
+
       justify-content: space-between;
+
       gap: 20px;
     }
 
@@ -614,12 +729,15 @@
 
     .reveal {
       opacity: 0;
+
       transform: translateY(30px);
+
       transition: all 0.8s ease;
     }
 
     .reveal.active {
       opacity: 1;
+
       transform: translateY(0);
     }
 
@@ -644,6 +762,7 @@
 
       .hero-grid {
         grid-template-columns: 1fr;
+
         gap: 70px;
       }
 
@@ -662,6 +781,7 @@
       .about-grid,
       .experience-grid {
         grid-template-columns: 1fr;
+
         gap: 50px;
       }
 
@@ -691,6 +811,7 @@
 
       .hero-title {
         font-size: 54px;
+
         letter-spacing: -2px;
       }
 
@@ -801,20 +922,29 @@
 
             </p>
 
+
+            <!-- HERO BUTTONS -->
+
             <div class="hero-buttons">
 
               <a href="#projects" class="btn btn-primary">
                 Explore My Work
               </a>
 
-              <a href="#contact" class="btn btn-secondary">
-                Let's Connect
+              <a
+                href="Glenn Juan - CV.pdf"
+                class="btn btn-secondary"
+                download
+              >
+                Download CV
               </a>
 
             </div>
 
           </div>
 
+
+          <!-- PROFILE PHOTO -->
 
           <div class="hero-image-wrapper reveal">
 
@@ -887,12 +1017,19 @@
             <div class="skills">
 
               <span class="skill">Business Analysis</span>
+
               <span class="skill">Project Coordination</span>
+
               <span class="skill">Requirements Analysis</span>
+
               <span class="skill">UI Wireframing</span>
+
               <span class="skill">Application Support</span>
+
               <span class="skill">User Training</span>
+
               <span class="skill">UAT</span>
+
               <span class="skill">Operational Research</span>
 
             </div>
@@ -935,6 +1072,7 @@
 
 
           <div class="experience-content reveal">
+
 
             <div class="role">
 
@@ -988,6 +1126,7 @@
 
             </div>
 
+
           </div>
 
         </div>
@@ -1006,6 +1145,7 @@
 
       <div class="container">
 
+
         <div class="projects-header reveal">
 
           <div>
@@ -1019,6 +1159,7 @@
             </h2>
 
           </div>
+
 
           <p class="section-description">
 
@@ -1157,8 +1298,10 @@
               </div>
 
               <p>
+
                 Improved customer service access to consumer data
                 and supported stronger customer relationships.
+
               </p>
 
             </div>
@@ -1291,8 +1434,10 @@
               </div>
 
               <p>
+
                 Used across 20 YOGYA Group branches,
                 Maison Wilhelmina, and Avril.
+
               </p>
 
             </div>
@@ -1447,6 +1592,7 @@
 
       <div class="container">
 
+
         <div class="reveal">
 
           <div class="eyebrow">
@@ -1470,6 +1616,7 @@
 
 
         <div class="approach-grid">
+
 
           <div class="approach-card reveal">
 
@@ -1534,6 +1681,7 @@
 
           </div>
 
+
         </div>
 
       </div>
@@ -1571,7 +1719,8 @@
 
         <div class="contact-buttons reveal">
 
-          <!-- Gmail -->
+
+          <!-- GMAIL -->
 
           <a
             href="https://mail.google.com/mail/?view=cm&fs=1&to=glennjuan07@gmail.com"
@@ -1582,7 +1731,7 @@
           </a>
 
 
-          <!-- LinkedIn -->
+          <!-- LINKEDIN -->
 
           <a
             href="https://www.linkedin.com/in/glenn-juan-774282224"
@@ -1593,7 +1742,7 @@
           </a>
 
 
-          <!-- WhatsApp -->
+          <!-- WHATSAPP -->
 
           <a
             href="https://wa.me/6281324748010"
@@ -1602,6 +1751,7 @@
           >
             WhatsApp
           </a>
+
 
         </div>
 
@@ -1641,27 +1791,26 @@
 
   <script>
 
-    /* =======================================================
-       NAVBAR SCROLL EFFECT
-    ======================================================== */
+    /* NAVBAR SCROLL EFFECT */
 
     const navbar = document.getElementById("navbar");
 
     window.addEventListener("scroll", () => {
 
       if (window.scrollY > 50) {
+
         navbar.classList.add("scrolled");
+
       } else {
+
         navbar.classList.remove("scrolled");
+
       }
 
     });
 
 
-
-    /* =======================================================
-       SCROLL REVEAL
-    ======================================================== */
+    /* SCROLL REVEAL */
 
     const revealElements =
       document.querySelectorAll(".reveal");
